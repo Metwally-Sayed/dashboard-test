@@ -1,3 +1,8 @@
+import Header from "@/components/ui/header";
+import "@sap-ui/common-css/dist/sap-container-type.css";
+import "@sap-ui/common-css/dist/sap-content-paddings.css";
+import '@ui5/webcomponents-react/styles.css'
+import { ThemeProvider } from "@ui5/webcomponents-react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -25,9 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <ThemeProvider >
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <Header />
+          <main className="sap-container-type-inline-size">
+            <div>{children}</div>
+          </main>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
