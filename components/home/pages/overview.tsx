@@ -1,7 +1,7 @@
 import { cardData } from "@/utils/dummydata";
 import { Grid, Title } from "@ui5/webcomponents-react";
 import OverViewCard from "../overViewCard";
-type Props = {}1;
+type Props = {};
 
 const Overview = (props: Props) => {
   return (

@@ -1,4 +1,4 @@
-import { Card, CardHeader, Icon } from "@ui5/webcomponents-react";
+import { Card, CardHeader } from "@ui5/webcomponents-react";
 
 type Props = {
   title: string;
@@ -23,7 +23,7 @@ const OverViewCard = (props: Props) => {
           alignItems: "end",
         }}
       >
-        <Icon name={props.icon} />
+        {/* <Icon name={"add-coursebook"} /> */}
       </div>
     </Card>
   );
